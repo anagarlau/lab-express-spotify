@@ -1,11 +1,17 @@
 
 
  
- 
+
+
+ <div style="display: flex; flex-direction:column; justify-content:center; align-items:center">
 {{#each searchedArtist}}
-<p>{{this.name}}</p>
-{{!-- <img src="{{this.images.1.url}}" alt="">  --}}
+<p style="color: red;">{{this.name}}</p>  
+{{#if this.images.[1]}}
+<img style="width: 100px; height= 100px" src="{{this.images.1.url}}" alt=""> 
+{{else}}
+<img style="width: 100px; height= 100px" src="/images/spotify-background.jpeg" alt=""> 
+{{/if}}
 <a href='/albums/{{this.id}}'> View Albums</a>
 {{/each}}
 
- 
+ </div>

@@ -39,7 +39,7 @@ app.get('/', (req, res)=>{
 app.get('/albums/:artistId', (req, res)=>{
     console.log('moo')
     spotifyApi.getArtistAlbums(req.params.artistId).then(data=>{
-        console.log(data.body.items)
+        console.log(data.body.items[0].artists[0].name)
         res.render('albums', {albums: data.body.items})
     }).catch(err=>console.log(err))
 })

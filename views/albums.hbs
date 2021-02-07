@@ -1,12 +1,16 @@
  
-<h3> Albums for /// {{searchedArtist.name}}  </h3>
 
-<div>
 
+<div style="display: flex; flex-direction:column; justify-content:center; align-items:center">
+<h3 style="color:blue"> Albums for: {{albums.0.artists.0.name}}  </h3>
 {{#each albums }}
 
 <div>{{this.name}}</div>
-<img src="{{this.images.1.url}}" alt=""> 
 
+ 
+<img style="width: 100px; height= 100px" src="{{this.images.0.url}}" alt="" > 
+ 
+ 
+ 
 {{/each}}
 </div>
